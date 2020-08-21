@@ -1,0 +1,630 @@
+main{
+	background:linear-gradient(to bottom, rgba(232, 232, 232, 0.4), rgba(255, 255, 255), rgba(14, 18, 62));}
+
+body{
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-position-x: initial !important;
+    background-position-y: initial !important;
+    background-size: initial !important;
+    background-repeat-x: initial !important;
+    background-repeat-y: initial !important;
+    background-attachment: initial !important;
+    background-origin: initial !important;
+    background-clip: initial !important;
+}
+
+a{
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Informasi*/
+
+.carousel-inner a{
+	color: white;
+}
+
+.text-center h2{
+	font-size: 35px;
+}
+
+/*Sambutan Bupati*/
+
+.cont-bupati h1, .cont-wabupati h1{
+	font-size: 30px;
+	padding-top: 30px;
+}
+
+.cont-bupati h2, .cont-wabupati h2{
+	font-size:28px;
+}
+
+.cont-bupati p, .cont-wabupati p{
+	padding: 0 5%;
+}
+
+.clear{
+	clear: left;
+}
+
+.cont-bupati{
+	margin-bottom: 80px;
+}
+
+.cont-bupati img{
+	float: left;
+	margin-left: 50px;
+}
+
+.cont-wabupati img{
+	float: left;
+	margin-left: 50px;
+}
+
+.text-center{
+	margin-bottom: 50px;
+	font-size: 40px;
+	padding-top: 20px;
+}
+
+.kata-sambutan{
+	background-color: white;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0);
+	border-radius: 70px;
+	padding: 0px 5% 80px 5%;
+	margin-top: 30px;
+	margin-right: 150px; 
+	margin-left: 150px;
+}
+
+/*Visi Misi*/
+.cont-visimisi{
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0);
+	border-radius: 70px;
+	background-color: #0e123e;
+	color: white;
+	margin-top: 30px;
+	padding: 70px;
+	margin-right: 150px; 
+	margin-left: 150px; 
+}
+
+.txt-visimisi{
+	text-align: center;
+	padding-top: 50px;
+}
+
+/*Dinas*/
+
+.dinas a{
+	text-decoration: none;
+	background-color: #E96C35;
+	color: white;
+	padding: 6px 6px;
+	border: 1px solid white;
+	border-radius: 50px;
+	font-size: 15px;
+}
+
+.dinas img{
+	width: 50%;
+	margin: 20px auto;
+}
+
+.dinas-hima{	
+	padding-bottom: 30px;
+}
+
+.cont-dinas{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: white;
+	box-shadow: 0px 2px 5px 2px rgba(0, 0, 0);
+	border-radius: 70px;
+	height: 80%;
+	padding: 50px 20px;
+	margin: 0 100px; 
+	margin-top: 20px;
+}
+
+.dinas{
+	width: 250px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+/* Footer */
+footer li{
+	font-size: 40%;
+}
+
+.footer-copyright{
+	font-size: 15px;
+}
+
+.ftr{
+	/* height: 150px;	 */
+}
+
+.ftr-left {
+	float: left;
+}
+.ftr-left img{
+	width: 100px; 
+	float: left; 
+	margin: 0 20px 0 40px;
+}
+
+.ftr-rgt {
+	/* margin-left: 60px; */
+}
+
+/*-------STRUKTURAL HIMA-------*/
+
+/*BG CONTAINER STRUKTURAL*/
+.bg-container-struktural{
+	width: 100%;
+	height: 640px;
+	text-align:center;
+}
+
+.h1-top{
+	padding-top: 15%;
+}
+
+.bg-container-struktural h1{
+	letter-spacing: 4px;
+}
+
+/*CONTENT STRUKTURAL*/
+.content-struktural{
+	height: 450px;
+	margin: 0 10%;
+}
+
+.group{
+	
+	box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.7);
+	border-radius: 20px;
+	width: 25%;
+	text-align: center;
+	padding:50px 30px 50px 30px;
+}
+
+.gr-mid{
+	position: absolute;
+	margin-left: 28%;
+	color: white;
+	background-color: #0e123e;
+
+}
+
+.gr{
+	color: #0e123e;
+	margin-top: 80px;
+}
+
+.gr-left{
+	float: left;
+}
+
+.gr-right{
+	float: right;
+}
+
+/*CAROUSEL STRUKTURAL*/
+
+.carousel-struktural h1{
+	color: #0e123e;
+}
+
+.position-str{
+	display: flex;
+	margin-bottom: 100px;
+}
+
+.position-str img{
+	width: 300px;
+}
+
+.str{
+	text-align: center;
+	width: 50%;
+}
+
+.str h2{
+	font-size: 25px;
+}
+
+.move-left{
+	padding-left: 100px;
+}
+
+.move-right{
+	padding-right: 100px;
+}
+
+.marg-txt{
+	margin-top: 150px;
+}
+
+/*CONTACT*/
+.bg-contact{
+	/*text-align: center;*/
+	color: white;
+}
+
+.box-contact{
+	text-align: center;
+	border: 2px solid white;
+	margin: 0px 250px;
+	padding: 20px 40px 30px 40px;
+	border-radius: 25px;
+}
+
+.box-medsos{
+	display: flex;
+}
+
+.box-hima{
+	margin: 0 auto;
+}
+
+.txt-medsos{
+	margin-bottom: 50px;
+}
+
+.ic{
+	margin-bottom: 20px;
+}
+
+.box-maps{
+	border: 2px solid white;
+	margin-top: 5px;
+	margin-right: 300px;
+	margin-left: 300px;
+	border-radius: 25px;
+}
+
+/*DINAS*/
+.cover-dinas{
+	background-size: cover;
+	height: 640px;
+	width: 100%;
+}
+
+.transparent-dinas{
+	background-color: rgba(14, 18, 62, 0.5); 
+	height: 640px;
+}
+
+.size-icon-dinas{
+	width: 170px;
+	margin-bottom: 10px;
+}
+
+.header-dinas{
+	padding-top: 10%;
+	color: white;
+}
+
+.header-dinas h1{
+	font-size: 50px;
+	letter-spacing: 5px;
+}
+
+.size-icon-dinas-desc{
+	margin: 20px 0px;
+	width: 250px;
+}
+
+.size-h1-desc{
+	font-size: 45px;
+}
+
+.desc-dinas-marg{
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+.line-height-desc{
+	line-height: 35px;
+}
+
+.box-desc-dinas{
+	color: white;
+	border: 1px solid #0e123e;
+	background-color: #0e123e;
+	border-radius: 25px;
+	padding: 40px 50px;
+	box-shadow: 20px 20px rgba(14, 18, 62, 0.3);
+	margin-bottom: 100px;
+}
+
+.struktural-dinas{
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+.struktural-dinas-kadin img{
+	margin: 0 auto;
+}
+
+.group-dinas{
+	display: flex;
+}
+
+.struktural-dinas-staff img{
+	margin: 0 auto;
+	width: 300px;
+}
+
+/*PROKER*/
+.content-proker{
+	margin:0px 50px; 
+	padding: 100px 0px;
+}
+
+.txt-proker-box{
+	color: white;
+	background-color: #0e123e;
+	padding: 30px 0px;
+	margin-bottom:50px;
+	border-radius: 30px;
+	font-size: 50px;
+}
+
+.box-content-proker{
+	padding: 40px 50px;
+	border-radius: 25px;
+	background-color: white;
+}
+
+.box-content-proker h2{
+	font-size:40px;
+	color: #0e123e;
+	margin-bottom: 10px;
+}
+
+.owner-proker{
+	display: flex;
+	color: grey;
+}
+
+.box-content-proker img{
+	width: 100%;
+	padding: 30px 0px;
+}
+
+.box-content-proker p{
+	font-size: 20px;
+}
+
+.logo-tanggal h3{
+	background-color: #0e123e;
+	width: 100px;
+	padding: 5px 20px;
+	margin: 0;
+}
+
+.logo-tanggal h2{
+	background-color: #7b81a1;
+	width: 100px; 
+	padding: 15px 20px;
+}
+
+.logo-tanggal{
+	float: left;
+	text-align: center;
+	color: white;
+	padding-right: 30px;
+}
+
+.logo-owner{
+	padding-right: 10px;
+}
+
+/*PROKER DINAS*/
+.content-proker-dinas{
+	margin:0px 50px; 
+	padding-bottom: 100px;
+}
+
+.box-content-proker-dinas{
+	padding: 40px 50px;
+	border-radius: 0px 0px 25px 25px;
+	background-color: white;
+}
+
+.box-content-proker-dinas h2{
+	font-size:40px;
+	color: #0e123e;
+	margin-bottom: 10px;
+}
+.box-content-proker-dinas img{
+	width: 100%;
+	padding: 30px 0px;
+}
+
+.box-content-proker-dinas p{
+	font-size: 20px;
+}
+
+.group-foto{
+	display: flex;
+}
+
+.foto-proker{
+	width: 25%;
+}
+
+.foto-proker img{
+	width: 100%;
+}
+
+.ft-awal{
+	margin: 0px 2px 5px 0px;
+}
+
+.ft-akhir{
+	margin: 0px 0px 5px 2px;
+}
+
+.ft-isi{
+	margin: 0px 2px 5px 2px;
+}
+
+.space-icon{
+	margin-right: 5px;
+}
+
+.see-post{
+	color: #0e123e;
+	margin-bottom: 50px;
+}
+
+.informasi-lain h2{
+	color: #0e123e;
+	font-size: 35px;
+	margin-bottom: 5px;
+}
+
+.informasi-lain h5{
+	color: grey;
+}
+
+.informasi-lain img{
+	float: left;
+	width: 30%;
+	margin-right: 30px;
+}
+
+/*LOGO KABINET*/
+.cont-makna{
+	margin:0px 50px; 
+	padding-bottom: 100px;
+}
+
+.box-deskripsi{
+	margin-top: 60px;
+	padding: 40px 50px;
+	border-radius: 25px;
+	background-color: white;
+}
+
+.cont-header-makna img{
+	width: 30%;
+	margin: 10px 0px;
+}
+
+.cont-header-makna{
+	text-align: center;
+}
+
+.cont-header-makna h1{
+	color: #0e123e;
+	letter-spacing: 5px;
+	padding-top: 35px;
+	line-height: 60px;
+}
+
+.text-top{
+	margin-bottom: 20px;
+}
+
+.text-mid{
+	margin: 20px 0px;
+}
+
+.box-deskripsi h3{
+	font-size: 40px;
+	margin-bottom: 30px;
+	color: #0e123e;
+}
+
+.box-deskripsi h4{
+	color: #0e123e;
+}
+
+@media only screen and (max-width: 768px){
+	/*Sambutan Bupati*/
+	.kata-sambutan{
+		margin: 50px 50px 0 50px;
+	}
+
+	.cont-bupati p, .cont-wabupati p{
+
+	}
+
+	.cont-bupati h1, .cont-wabupati h1{
+		margin: 0 5%;
+	}
+
+	.cont-bupati h2, .cont-wabupati h2{
+		margin: 0 5%;
+	}
+
+	
+	/* Visi Misi */
+
+	.cont-visimisi {
+		margin: 0 50px;
+	}
+
+	/* Dinas */
+	.cont-dinas {
+		margin: 0 50px; 
+	}
+
+	/* Footer */
+
+	.ftr-left {
+		margin: 0 ;
+		text-align: left;
+	}
+	.ftr-left img{
+		padding: 0 auto;
+		margin: 0 0 0 200px;
+	}
+
+	/* Struktural */
+
+	.marg-txt{
+		margin-top: 50px;
+		font-size: 35px;
+	}
+
+	.fa-arrow-circle-left {
+		font-size: 30px;
+	}
+
+	.fa-arrow-circle-right {
+		font-size: 30px;
+	}
+
+
+}
+
+@media only screen and (max-width: 600px){
+	/*Sambutan Bupati*/
+	.kata-sambutan{
+		padding: 0px 5% 50px 5%;
+	}
+
+	/* Visi Misi */
+
+	.cont-visimisi {
+		padding: 50px;
+	}
+
+	/* Footer */
+
+	.ftr-left img{
+		padding: 0 auto;
+		margin: 0 10%;
+	}
+}
