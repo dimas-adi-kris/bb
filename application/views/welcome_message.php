@@ -85,5 +85,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 </div>
 
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+					<!-- trial table -->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Product Name</th>
+								<th scope="col">Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								$count = 0;
+								foreach ($atabled->result() as $row):
+									$count++;
+							?>
+							<tr>
+								<th scope="row"><?php echo $count; ?></th>
+								<td><?php echo $row->judul; ?></td>
+								<td><?php echo $row->isi; ?></td>
+							</tr>
+							<?php endforeach;?>
+						</tbody>
+					</table>
+					<!-- trial table -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Himahome extends CI_Controller 
-{
+class testo extends CI_Controller {
+
 	function __construct()
 	{
 		parent::__construct();
@@ -11,10 +11,6 @@ class Himahome extends CI_Controller
 	public function index()
 	{
 		$data['atabled'] = $this->take_post->get_posting();
-		$this->load->view('hima_home',$data);
-	}
-	public function under_cons()
-	{
-		$this->load->view('under_construct');
+		$this->load->view('welcome_message',$data);
 	}
 }

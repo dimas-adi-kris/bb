@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Himahome extends CI_Controller 
+class admin extends CI_Controller 
 {
 	function __construct()
 	{
@@ -11,10 +11,11 @@ class Himahome extends CI_Controller
 	public function index()
 	{
 		$data['atabled'] = $this->take_post->get_posting();
-		$this->load->view('hima_home',$data);
+		$this->load->view('admin/1_dash',$data);
 	}
-	public function under_cons()
+
+	public function add_post()
 	{
-		$this->load->view('under_construct');
+		$this->load->view('admin/2_post');
 	}
 }

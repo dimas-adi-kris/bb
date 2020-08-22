@@ -11,11 +11,7 @@
 <!-- main -->
 <main>
 	<div id="main_content">
-		<?php
-			$count = 0;
-			foreach ($atabled->result() as $row):
-				$count++;
-		?>
+
 
 
 		
@@ -29,6 +25,11 @@
 				</tr>
 			</thead>
 			<tbody>
+				<?php
+					$count = 0;
+					foreach ($atabled->result() as $row):
+						$count++;
+				?>
 				<tr>
 					<th scope="row"><?php echo $count; ?></th>
 					<td><?php echo $row->judul; ?></td>
