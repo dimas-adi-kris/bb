@@ -18,4 +18,12 @@ class admin extends CI_Controller
 	{
 		$this->load->view('admin/2_post');
 	}
+
+	public function save()
+	{
+		$judul = $this->input->post('judul');
+		$isi = $this->input->post('isi');
+		$this->take_post->save_post($judul,$isi);
+		redirect('admin');
+	}
 }

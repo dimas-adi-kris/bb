@@ -10,6 +10,6 @@ class Product_model extends CI_Model{
       'judul' => $judul,
       'isi' => $isi
     );
-    $this->db->insert('product',$data);
+    $this->db->insert('atabled',$data);
   }
 }
