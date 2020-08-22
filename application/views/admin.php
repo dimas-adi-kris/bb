@@ -3,20 +3,7 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>SB Admin 2 - Dashboard</title>
-
-  <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template-->
-  <link href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>" rel="stylesheet">
+<?php $this->load->view("admin_temp/1_head"); ?>
 
 </head>
 
@@ -29,7 +16,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php base_url("admin");?>">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -41,7 +28,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?php base_url("admin");?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -288,7 +275,30 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
+					<!-- trial table -->
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">Product Name</th>
+								<th scope="col">Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php
+								$count = 0;
+								foreach ($atabled->result() as $row):
+									$count++;
+							?>
+							<tr>
+								<th scope="row"><?php echo $count; ?></th>
+								<td><?php echo $row->judul; ?></td>
+								<td><?php echo $row->isi; ?></td>
+							</tr>
+							<?php endforeach;?>
+						</tbody>
+					</table>
+					<!-- trial table -->
 
         </div>
         <!-- /.container-fluid -->
@@ -336,23 +346,7 @@
     </div>
   </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="<?php echo base_url('assets/js/sb-admin-2.min.js'); ?>"></script>
-
-  <!-- Page level plugins -->
-  <script src="<?php echo base_url('assets/vendor/chart.js/Chart.min.js'); ?>"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="<?php echo base_url('assets/js/demo/chart-area-demo.js'); ?>"></script>
-  <script src="<?php echo base_url('assets/js/demo/chart-pie-demo.js'); ?>"></script>
-
+<?php $this->load->view("admin_temp/2_source"); ?>
 </body>
 
 </html>

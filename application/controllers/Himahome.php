@@ -16,7 +16,13 @@ class Himahome extends CI_Controller
 
 	public function admin()
 	{
-		$this->load->view('admin.php');
+		$data['atabled'] = $this->take_post->get_posting();
+		$this->load->view('admin',$data);
+	}
+
+	public function under_cons()
+	{
+		$this->load->view('under_construct');
 	}
 
 }
