@@ -36,6 +36,7 @@ class login_cont extends CI_Controller {
 			$data_session = array(
 				'status' => "wrong password");
 			$this->session->set_userdata($data_session);
+			redirect(base_url("login_cont"));
 		}
 	}
 }
