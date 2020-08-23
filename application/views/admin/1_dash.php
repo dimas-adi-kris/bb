@@ -108,8 +108,9 @@
 						<thead>
 							<tr>
 								<th scope="col">#</th>
-								<th scope="col">Product Name</th>
-								<th scope="col">Price</th>
+								<th scope="col">Judul</th>
+								<th scope="col">Isi</th>
+								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -123,7 +124,43 @@
 								<td><?php echo $row->judul; ?></td>
 								<td><?php echo $row->isi; ?></td>
 								<td>
-									<button type="button" class="btn btn-bold btn-label-brand btn-sm" data-toggle="modal" data-target="#kt_modal_1"> Launch Modal</button>
+									<a href="<?php echo site_url('product/edit_it/'.$row->id);?>" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1">Edit Post
+									</a>
+										<!--begin::Modal-->
+										<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														</button>
+													</div>
+													<div class="modal-body">
+														<p>TES MODAL</p>
+														<form action="<?php echo site_url('admin/edit_data');?>" method="post">
+															<div class="form-group">
+																<label>Judul</label>
+																<input type="text" name="judul" id="judul" value="<?php echo $row->judul;?>" placeholder="Judul" class="form-control">
+															</div>
+															<div class="form-group">
+																<label>Isi</label>
+																<input type="text" name="isi" id="isi" value="<?php echo $row->isi;?>" placeholder="Isi" class="form-control">
+															</div>
+														</form>
+														
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+														<button type="button" class="btn btn-primary">Save changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!--end::Modal-->
+									<a href="<?php echo site_url('admin/delete/'.$row->id);?>" class="btn btn-danger btn-circle">
+                    <i class="fas fa-trash"></i>
+                  </a>
 								</td>
 								
 							</tr>
@@ -142,6 +179,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
+					<?php echo '<pre>'; print_r($this->session->all_userdata());exit;?>
             <span>Copyright &copy; Your Website 2020</span>
           </div>
         </div>
@@ -158,27 +196,7 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
-	<!--begin::Modal-->
-	<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					</button>
-				</div>
-				<div class="modal-body">
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!--end::Modal-->
 
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

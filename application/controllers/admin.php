@@ -6,6 +6,10 @@ class admin extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+
+		if($this->session->userdata('status') != "logged in"){
+			redirect(base_url("login_cont"));
+		}
 		$this->load->model('take_post');
 	}
 	public function index()
@@ -25,5 +29,21 @@ class admin extends CI_Controller
 		$isi = $this->input->post('isi');
 		$this->take_post->save_post($judul,$isi);
 		redirect('admin');
+	}
+
+	public function delete()
+	{
+		$id = $this->uri->segment(3);
+		$this->take_post->delete($id);
+		redirect('admin');
+	}
+
+	function login_page(){
+		$this->load->view('login');
+	}
+
+	function logout(){
+		$this->session->sess_destroy();
+		redirect(base_url('login'));
 	}
 }

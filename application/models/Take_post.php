@@ -12,5 +12,14 @@ class Take_post extends CI_Model{
       'isi' => $isi
     );
     $this->db->insert('atabled',$data);
-  }
+	}
+	
+	function delete($id){
+		$this->db->where('id', $id);
+		$this->db->delete('atabled');
+	}
+
+	function login($table,$where){
+		return $this->db->get_where($table,$where);
+	}
 }
