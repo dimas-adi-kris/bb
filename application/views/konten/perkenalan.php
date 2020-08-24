@@ -11,15 +11,16 @@
 	<!--/.Navbar -->
 	<!-- main -->
 	<main>
+
 		<!--Carousel Wrapper-->
-		<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="carousell-himasisko" class="carousel slide carousel-fade" data-ride="carousel">
 			<!--Indicators-->
 			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-2" data-slide-to="1"></li>
-				<li data-target="#carousel-example-2" data-slide-to="2"></li>
-				<li data-target="#carousel-example-2" data-slide-to="3"></li>
-				<li data-target="#carousel-example-2" data-slide-to="4"></li>
+				<li data-target="#carousell-himasisko" data-slide-to="0" class="active"></li>
+				<li data-target="#carousell-himasisko" data-slide-to="1"></li>
+				<li data-target="#carousell-himasisko" data-slide-to="2"></li>
+				<li data-target="#carousell-himasisko" data-slide-to="3"></li>
+				<li data-target="#carousell-himasisko" data-slide-to="4"></li>
 			</ol>
 			<!--/.Indicators-->
 			<!--Slides-->
@@ -65,7 +66,7 @@
 				<div class="carousel-item">
 					<!--Mask color-->
 					<div class="view">
-						<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+						<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Fourth slide">
 						<div class="mask rgba-black-slight"></div>
 					</div>
 					<div class="carousel-caption">
@@ -78,24 +79,24 @@
 				<div class="carousel-item">
 					<!--Mask color-->
 					<div class="view">
-						<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+						<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Fifth slide">
 						<div class="mask rgba-black-slight"></div>
 					</div>
 					<div class="carousel-caption">
 						<a href='"#"'>
 							<h1 class="h1-responsive">Info Lomba</h1>
 						</a>
-						<p>Technology Euphoria</p>
+						<p>Festival Technology</p>
 					</div>
 				</div>
 			</div>
 			<!--/.Slides-->
 			<!--Controls-->
-			<a class="carousel-control-prev" href='"#carousel-example-2"' role="button" data-slide="prev">
+			<a class="carousel-control-prev" href="#carousell-himasisko" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
 			</a>
-			<a class="carousel-control-next" href='"#carousel-example-2"' role="button" data-slide="next">
+			<a class="carousel-control-next" href="#carousell-himasisko" role="button" data-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
@@ -116,7 +117,7 @@
 							Wassalamualaikum Warahmatullahi Wabarakatuh</p>
 					</div>
 				</div>
-				<hr align="center" width="80%" style="border: 1px solid black">
+				<hr>
 				<div class="cont-wabupati">
 					<img src="<?php echo base_url('assets/Logo/kiki-circle.png'); ?>" style=" width: 300px;">
 					<div class="txt-wbpt">
@@ -130,10 +131,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="visimisi">
-			<h2 class="txt-visimisi">VISI & MISI</h2>
+		<div class="visimisi mt-5">
 			<div class="cont-visimisi">
-				<h3 align="center">Visi</h3>
+
+				<h3 class="text-center">Visi</h3>
 				<p>Program Studi Sistem Komputer pada tahun 2025 menjadi
 					program Pendidikan akademik yang terkemuka di bidang
 					riset dan rekayasa teknologi sistem komputer yang mampu
@@ -142,7 +143,7 @@
 					berwawasan keilmuan, professional dan mempunyai
 					keunggulan ilmu sehingga mampu bersaing di era globalisasi.</p>
 
-				<h3 align="center">Misi</h3>
+				<h3 class="text-center">Misi</h3>
 				<p>Meningkatkan kualitasm kuantitas dan pendayagunaaan sumber
 					daya manusia bidang sistem komputer dengan tujuan untuk
 					mengatasi kesenjangan digital, kesenjangan informasi dan
@@ -213,7 +214,6 @@
 	<!-- Footer -->
 
 	<!-- End your project here-->
-
 	<?php $this->load->view("template/sour"); ?>
 
 </body>

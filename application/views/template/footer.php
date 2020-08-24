@@ -12,7 +12,7 @@
         <!-- Content -->
         <img src="<?php echo base_url('assets/Logo/Kabinet-digital.png'); ?>">
         <p style="font-size: 40%;">HIMASISKO</p>
-        <p style="font-size: 40%;margin-bottom:0px;">Kabinet Konstelasi Digital</p>
+        <p style="font-size: 40%;">Kabinet Konstelasi Digital</p>
         <p style="font-size: 40%;">#EkspedisiRasi</p>
 
       </div>
@@ -20,7 +20,7 @@
 
 
       <!-- Grid column -->
-      <div class="col-md-3 mt-md-0 mt-3 ftr-ctr" >
+      <div class="col-md-3 mt-md-0 mt-3 ftr-ctr">
 
         <!-- Links -->
         <h5 class="text-uppercase">Tentang</h5>
@@ -41,7 +41,7 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 mt-md-0 mt-3 ftr-rgt" >
+      <div class="col-md-3 mt-md-0 mt-3 ftr-rgt">
 
         <!-- Links -->
         <h5 class="text-uppercase">Temukan Kami !</h5>
@@ -55,7 +55,7 @@
             <a href='"#"'><i class="fab fa-facebook fa-2x"></i></a>
           </li>
           <li>
-            <p style="font-size: 12px;"><span><i class="fas fa-map-marker-alt fa-2x"></i></span>  Fakultas Ilmu Komputer Universitas Sriwijaya <br> Jl. Palembang-Prabumulih KM.32 Kab. Indralaya, Kabupaten Ogan Ilir, Sumatera Selatan</p>
+            <p style="font-size: 12px;"><span><i class="fas fa-map-marker-alt fa-2x"></i></span> Fakultas Ilmu Komputer Universitas Sriwijaya <br> Jl. Palembang-Prabumulih KM.32 Kab. Indralaya, Kabupaten Ogan Ilir, Sumatera Selatan</p>
           </li>
         </ul>
 
