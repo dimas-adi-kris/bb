@@ -3,7 +3,7 @@
 
 <head>
 
-<?php $this->load->view("admin_temp/1_head"); ?>
+  <?php $this->load->view("admin_temp/head"); ?>
 
 </head>
 
@@ -16,7 +16,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url("admin");?>">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url("admin"); ?>">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -28,13 +28,13 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin');?>">
+        <a class="nav-link" href="<?php echo base_url('admin'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
-			</li>
-			
-			<li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post');?>">
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Tambah post</span></a>
       </li>
@@ -97,77 +97,77 @@
       <!-- Main Content -->
       <div id="content">
 
-				<!-- Topbar -->
-				<?php $this->load->view('admin_temp/4_Topbar'); ?>
+        <!-- Topbar -->
+        <?php $this->load->view('admin_temp/topbar'); ?>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-					<!-- trial table -->
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">Judul</th>
-								<th scope="col">Isi</th>
-								<th scope="col">Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php
-								$count = 0;
-								foreach ($atabled->result() as $row):
-									$count++;
-							?>
-							<tr>
-								<th scope="row"><?php echo $row->id; ?></th>
-								<td><?php echo $row->judul; ?></td>
-								<td><?php echo $row->isi; ?></td>
-								<td>
-									<a href="<?php echo site_url('product/edit_it/'.$row->id);?>" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1">Edit Post
-									</a>
-										<!--begin::Modal-->
-										<div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-											<div class="modal-dialog" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-														<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-														</button>
-													</div>
-													<div class="modal-body">
-														<p>TES MODAL</p>
-														<form action="<?php echo site_url('admin/edit_data');?>" method="post">
-															<div class="form-group">
-																<label>Judul</label>
-																<input type="text" name="judul" id="judul" value="<?php echo $row->judul;?>" placeholder="Judul" class="form-control">
-															</div>
-															<div class="form-group">
-																<label>Isi</label>
-																<input type="text" name="isi" id="isi" value="<?php echo $row->isi;?>" placeholder="Isi" class="form-control">
-															</div>
-														</form>
-														
-													</div>
-													<div class="modal-footer">
-														<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-														<button type="button" class="btn btn-primary">Save changes</button>
-													</div>
-												</div>
-											</div>
-										</div>
+          <!-- trial table -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Judul</th>
+                <th scope="col">Isi</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+              $count = 0;
+              foreach ($atabled->result() as $row) :
+                $count++;
+              ?>
+                <tr>
+                  <th scope="row"><?php echo $row->id; ?></th>
+                  <td><?php echo $row->judul; ?></td>
+                  <td><?php echo $row->isi; ?></td>
+                  <td>
+                    <a href="<?php echo site_url('product/edit_it/' . $row->id); ?>" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1">Edit Post
+                    </a>
+                    <!--begin::Modal-->
+                    <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>TES MODAL</p>
+                            <form action="<?php echo site_url('admin/edit_data'); ?>" method="post">
+                              <div class="form-group">
+                                <label>Judul</label>
+                                <input type="text" name="judul" id="judul" value="<?php echo $row->judul; ?>" placeholder="Judul" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label>Isi</label>
+                                <input type="text" name="isi" id="isi" value="<?php echo $row->isi; ?>" placeholder="Isi" class="form-control">
+                              </div>
+                            </form>
 
-										<!--end::Modal-->
-									<a href="<?php echo site_url('admin/delete/'.$row->id);?>" class="btn btn-danger btn-circle">
-                    <i class="fas fa-trash"></i>
-                  </a>
-								</td>
-								
-							</tr>
-							<?php endforeach;?>
-						</tbody>
-					</table>
-					<!-- trial table -->
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!--end::Modal-->
+                    <a href="<?php echo site_url('admin/delete/' . $row->id); ?>" class="btn btn-danger btn-circle">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  </td>
+
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+          <!-- trial table -->
 
         </div>
         <!-- /.container-fluid -->
@@ -179,7 +179,8 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-					<?php echo '<pre>'; print_r($this->session->all_userdata());?>
+            <?php echo '<pre>';
+            print_r($this->session->all_userdata()); ?>
             <span>Copyright &copy; Your Website 2020</span>
           </div>
         </div>
@@ -211,13 +212,13 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<?php echo base_url('admin/logout');?>">Logout</a>
+          <a class="btn btn-primary" href="<?php echo base_url('admin/logout'); ?>">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
-	<?php $this->load->view("admin_temp/2_source"); ?>
+  <?php $this->load->view("admin_temp/source"); ?>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class login_cont extends CI_Controller {
+class login extends CI_Controller
+{
 
 	function __construct()
 	{
@@ -10,7 +11,7 @@ class login_cont extends CI_Controller {
 	}
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('auth/login');
 	}
 
 	function login()
@@ -21,9 +22,8 @@ class login_cont extends CI_Controller {
 			'username' => $user,
 			'password' => md5($pass)
 		);
-		$cek = $this->take_post->login("adminhima",$where)->num_rows();
-		if($cek > 0)
-		{
+		$cek = $this->take_post->login("adminhima", $where)->num_rows();
+		if ($cek > 0) {
 			$data_session = array(
 				'nama' => $user,
 				'status' => "logged in"
@@ -32,11 +32,12 @@ class login_cont extends CI_Controller {
 			$this->session->set_userdata($data_session);
 
 			redirect(base_url("admin"));
-		}else{
+		} else {
 			$data_session = array(
-				'status' => "wrong password");
+				'status' => "wrong password"
+			);
 			$this->session->set_userdata($data_session);
-			redirect(base_url("login_cont"));
+			redirect(base_url("Admin/home"));
 		}
 	}
 }
