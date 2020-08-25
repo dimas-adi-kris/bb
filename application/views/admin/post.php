@@ -3,7 +3,7 @@
 
 <head>
 
-<?php $this->load->view("admin_temp/1_head"); ?>
+<?php $this->load->view("admin_temp/head"); ?>
 
 </head>
 
@@ -34,7 +34,7 @@
 			</li>
 			
 			<li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post');?>">
+        <a class="nav-link" href="<?php echo base_url('admin/home/add_post');?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Tambah post</span></a>
       </li>
@@ -98,14 +98,14 @@
       <div id="content">
 
 				<!-- Topbar -->
-				<?php $this->load->view('admin_temp/4_Topbar'); ?>
+				<?php $this->load->view('admin_temp/Topbar'); ?>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
 					<h1>Post Baru</h1>
 					<div class="col-md-6 offset-md-3">
-						<form action="<?php echo site_url('admin/save');?>" method="post">
+						<form action="<?php echo site_url('admin/home/save');?>" method="post">
 							<div class="form-group">
 								<label>Judul</label>
 								<input type="text" name="judul" placeholder="Judul" class="form-control">
@@ -163,7 +163,7 @@
     </div>
   </div>
 
-<?php $this->load->view("admin_temp/2_source"); ?>
+<?php $this->load->view("admin_temp/source"); ?>
 </body>
 
 </html>

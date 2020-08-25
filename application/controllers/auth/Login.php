@@ -7,6 +7,9 @@ class login extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		if ($this->session->userdata('status') == "logged in") {
+            redirect(base_url("admin/home"));
+        }
 		$this->load->model('take_post');
 	}
 	public function index()
@@ -31,7 +34,7 @@ class login extends CI_Controller
 
 			$this->session->set_userdata($data_session);
 
-			redirect(base_url("admin"));
+			redirect(base_url("admin/home"));
 		} else {
 			$data_session = array(
 				'status' => "wrong password"

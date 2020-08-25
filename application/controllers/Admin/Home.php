@@ -28,14 +28,14 @@ class home extends CI_Controller
         $judul = $this->input->post('judul');
         $isi = $this->input->post('isi');
         $this->take_post->save_post($judul, $isi);
-        redirect('admin');
+        redirect('admin/home');
     }
 
     public function delete()
     {
         $id = $this->uri->segment(3);
         $this->take_post->delete($id);
-        redirect('admin');
+        redirect('admin/home');
     }
 
     function login_page()
@@ -46,6 +46,6 @@ class home extends CI_Controller
     function logout()
     {
         $this->session->sess_destroy();
-        redirect(base_url('login_cont'));
+        redirect(base_url('auth/login'));
     }
 }

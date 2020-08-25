@@ -34,7 +34,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
+        <a class="nav-link" href="<?php echo base_url('admin/home/add_post'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Tambah post</span></a>
       </li>
@@ -158,7 +158,7 @@
                     </div>
 
                     <!--end::Modal-->
-                    <a href="<?php echo site_url('admin/delete/' . $row->id); ?>" class="btn btn-danger btn-circle">
+                    <a href="<?php echo site_url('admin/home/delete/' . $row->id); ?>" class="btn btn-danger btn-circle">
                       <i class="fas fa-trash"></i>
                     </a>
                   </td>
@@ -212,7 +212,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="<?php echo base_url('admin/logout'); ?>">Logout</a>
+          <a class="btn btn-primary" href="<?php echo base_url('admin/home/logout'); ?>">Logout</a>
         </div>
       </div>
     </div>

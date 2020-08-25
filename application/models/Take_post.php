@@ -22,4 +22,12 @@ class Take_post extends CI_Model{
 	function login($table,$where){
 		return $this->db->get_where($table,$where);
 	}
+
+	function upd_data($id, $judul,$isi){
+    $data = array(
+      'judul' => $judul,
+      'isi' => $isi
+    );
+    $this->db->replace('atabled',$data);
+	}
 }

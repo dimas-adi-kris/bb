@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<?php $this->load->view("home/head"); ?>
+	<?php $this->load->view("template/head"); ?>
 </head>
 
 <body>

@@ -26,7 +26,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Kamu siapa!?</h1>
                   </div>
-                  <form class="user" action="<?php echo site_url('login_cont/login'); ?>" method="post">
+                  <form class="user" action="<?php echo site_url('auth/login/login'); ?>" method="post">
                     <div class="form-group">
                       <input type="text" name="username" id="username" class="form-control form-control-user">
                     </div>
