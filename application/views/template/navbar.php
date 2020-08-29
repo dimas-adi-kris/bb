@@ -2,9 +2,9 @@
 	<div class="container-fluid">
 		<div class="w-25">
 			<div class=" flex-row bd-highlight">
-				<a href=""> <img class="w-25 p-1" src=" <?php echo base_url('assets/Logo/logo-unsri-.png'); ?>"></a>
-				<a href=""><img class="w-25 p-2" src=" <?php echo base_url('assets/Logo/logo-himasisko-baru.png'); ?>"></a>
-				<a href=""><img class="w-25 p-1" src=" <?php echo base_url('assets/Logo/Kabinet-digital.png'); ?>"></a>
+				<a href="<?php echo base_url('home'); ?>"> <img class="w-25 p-1" src=" <?php echo base_url('assets/Logo/logo-unsri-.png'); ?>"></a>
+				<a href="<?php echo base_url('home'); ?>"><img class="w-25 p-2" src=" <?php echo base_url('assets/Logo/logo-himasisko-baru.png'); ?>"></a>
+				<a href="<?php echo base_url('home'); ?>"><img class="w-25 p-1" src=" <?php echo base_url('assets/Logo/Kabinet-digital.png'); ?>"></a>
 
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 		<div class="collapse navbar-collapse " id="navbarSupportedContent-4">
 			<ul class="navbar-nav ml-auto ">
 				<li class="nav-item ">
-					<a id="perkenalan" href="<?php echo base_url('perkenalan'); ?>" class="nav-link">
+					<a id="perkenalan" href="<?php echo base_url('home'); ?>" class="nav-link">
 						Home
 						<span class="sr-only">(current)</span>
 					</a>
@@ -40,16 +40,16 @@
 					<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						Profile </a>
 					<div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-2">
-						<a class="dropdown-item" href="struktural-hima.html">Struktur Kepengurusan</a>
-						<a class="dropdown-item" href="logo-kabinet.html">Logo Kabinet</a>
+						<a class="dropdown-item" href="<?php echo base_url('profile/struktur'); ?>">Struktur Kepengurusan</a>
+						<a class="dropdown-item" href="<?php echo base_url('profile/logo-kabinet'); ?>">Logo Kabinet</a>
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="proker-umum.html">
+					<a class="nav-link" href="<?php echo base_url('profile/news'); ?>">
 						News</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="contact.html">
+					<a class="nav-link" href="<?php echo base_url('contact'); ?>">
 						Contact</a>
 				</li>
 			</ul>

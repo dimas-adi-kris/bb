@@ -1,7 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php $this->load->view("template/head"); ?>
-</head>
+
 
 <body>
 
@@ -295,7 +293,3 @@
   <!-- End your project here-->
 
   <?php $this->load->view("template/sour"); ?>
-
-</body>
-
-</html>

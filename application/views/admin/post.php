@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
 <?php $this->load->view("admin_temp/head"); ?>
-
-</head>
 
 <body id="page-top">
 
@@ -16,7 +9,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url("admin");?>">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url("admin"); ?>">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -28,13 +21,13 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin');?>">
+        <a class="nav-link" href="<?php echo base_url('admin'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
-			</li>
-			
-			<li class="nav-item active">
-        <a class="nav-link" href="<?php echo base_url('admin/home/add_post');?>">
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo base_url('admin/home/add_post'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Tambah post</span></a>
       </li>
@@ -97,26 +90,26 @@
       <!-- Main Content -->
       <div id="content">
 
-				<!-- Topbar -->
-				<?php $this->load->view('admin_temp/Topbar'); ?>
+        <!-- Topbar -->
+        <?php $this->load->view('admin_temp/Topbar'); ?>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-					<h1>Post Baru</h1>
-					<div class="col-md-6 offset-md-3">
-						<form action="<?php echo site_url('admin/home/save');?>" method="post">
-							<div class="form-group">
-								<label>Judul</label>
-								<input type="text" name="judul" placeholder="Judul" class="form-control">
-							</div>
-							<div class="form-group">
-								<label>Isi</label>
-								<input type="text" name="isi" placeholder="isi" class="form-control">
-							</div>
-							<button type="submit" class="btn btn-primary">submit</button>
-						</form>
-					</div>
+          <h1>Post Baru</h1>
+          <div class="col-md-6 offset-md-3">
+            <form action="<?php echo site_url('admin/home/save'); ?>" method="post">
+              <div class="form-group">
+                <label>Judul</label>
+                <input type="text" name="judul" placeholder="Judul" class="form-control">
+              </div>
+              <div class="form-group">
+                <label>Isi</label>
+                <input type="text" name="isi" placeholder="isi" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary">submit</button>
+            </form>
+          </div>
         </div>
         <!-- /.container-fluid -->
 
@@ -163,7 +156,4 @@
     </div>
   </div>
 
-<?php $this->load->view("admin_temp/source"); ?>
-</body>
-
-</html>
+  <?php $this->load->view("admin_temp/source"); ?>

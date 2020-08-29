@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <?php $this->load->view("admin_temp/head"); ?>
-
-</head>
+<?php $this->load->view("admin_temp/head"); ?>
 
 <body id="page-top">
 
@@ -219,6 +212,3 @@
   </div>
 
   <?php $this->load->view("admin_temp/source"); ?>
-</body>
-
-</html>

@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php $this->load->view("admin_temp/head"); ?>
 
-<head>
-
-  <?php $this->load->view("admin_temp/head"); ?>
-
-</head>
 
 <body class="bg-gradient-primary">
 
@@ -53,7 +47,3 @@
   </div>
 
   <?php $this->load->view("admin_temp/source"); ?>
-
-</body>
-
-</html>
