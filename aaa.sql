@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2020 at 08:03 PM
+-- Generation Time: Aug 30, 2020 at 06:22 PM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.4.7
 
@@ -93,6 +93,19 @@ CREATE TABLE `tb_dinas` (
   `background` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tb_dinas`
+--
+
+INSERT INTO `tb_dinas` (`id`, `logo`, `nama`, `slug`, `background`) VALUES
+(1, 'eb83c161d1f029c0c91c00eb358e4fa1.png', 'Akademik', 'akademik', 'default.png'),
+(3, '685276549e31d5979b9816b4a314e8ed.png', 'Danus', 'danus', 'default.png'),
+(4, '09c2990098d6e7e0fc1bc04c58237957.png', 'Infokom', 'infokom', 'default.png'),
+(5, 'e76e098eed5db62b108f77dcbda11e0a.png', 'Kastrad', 'kastrad', 'default.png'),
+(6, '97c9db8c3d9fa7a700eac573ba06fd9c.png', 'Kestari', 'kestari', 'default.png'),
+(7, 'f37a2e3729aa63ec71fd95db1b2cf3b6.png', 'PMB', 'pmb', 'default.png'),
+(8, '0016fe9bdd0e48b552fa09c69368fcc5.png', 'PSDM', 'psdm', 'default.png');
+
 -- --------------------------------------------------------
 
 --
@@ -177,7 +190,7 @@ ALTER TABLE `tb_anggota`
 -- AUTO_INCREMENT for table `tb_dinas`
 --
 ALTER TABLE `tb_dinas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_jabatan`
