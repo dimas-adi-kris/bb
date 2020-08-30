@@ -39,7 +39,7 @@
         <div id="anggota" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <?php foreach ($dinas as $dns) : ?>
-              <a class="collapse-item" href="">Dinas <?= $dns->nama ?></a>
+              <a class="collapse-item" href="<?php echo base_url('admin/anggota/') . $dns->slug  ?>">Dinas <?= $dns->nama ?></a>
             <?php endforeach; ?>
           </div>
       </li>
