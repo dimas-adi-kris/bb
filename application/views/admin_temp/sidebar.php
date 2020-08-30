@@ -19,11 +19,6 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Tambah post</span></a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url('admin/dinas'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dinas</span></a>
@@ -33,10 +28,20 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Jabatan</span></a>
       </li>
+
+
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/anggota'); ?>">
+
+        <a class="nav-link collapsed" href="#anggota" data-toggle="collapse" data-target="#anggota" aria-expanded="true" aria-controls="collapseMaster">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Anggota</span></a>
+          <span>Anggota</span>
+        </a>
+        <div id="anggota" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <?php foreach ($dinas as $dns) : ?>
+              <a class="collapse-item" href="">Dinas <?= $dns->nama ?></a>
+            <?php endforeach; ?>
+          </div>
       </li>
 
 

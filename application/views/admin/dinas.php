@@ -57,13 +57,13 @@
                                         <?php foreach ($dinas as $dns) : ?>
                                             <tr>
                                                 <td>
-                                                    <img class="align-middle mx-auto" src="<?= base_url('/assets/Logo/') . $dns->logo ?>" alt="IMAGE" style="max-width :150px;">
+                                                    <img class=" mx-auto d-block" src="<?= base_url('/assets/Logo/') . $dns->logo ?>" alt="IMAGE" style="max-width :150px;">
                                                 </td>
-                                                <td>
+                                                <td class="text-center">
                                                     <?= $dns->nama ?>
                                                 </td>
                                                 <td>
-                                                    <img src="<?= base_url('/assets/Logo/') . $dns->background ?>" alt="IMAGE" style="max-width : 200px;">
+                                                    <img class="d-block  mx-auto" src="<?= base_url('/assets/Logo/') . $dns->background ?>" alt="IMAGE" style="max-width : 300px;">
                                                 </td>
                                                 <td class="text-center" width="160px">
                                                     <div class="btn btn-primary btn-sm btnupdate" data-toggle="modal" data-target="#staticBackdrop" data-id=<?= $dns->id ?>>

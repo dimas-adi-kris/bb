@@ -14,6 +14,7 @@ class home extends CI_Controller
     }
     public function index()
     {
+        $data['dinas'] = $this->take_post->show_item('tb_dinas')->result();
         $data['atabled'] = $this->take_post->get_posting();
         $this->load->view('admin/dashboard', $data);
     }

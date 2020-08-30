@@ -16,6 +16,7 @@ class jabatan extends CI_Controller
     {
         $data['atabled'] = $this->take_post->get_posting();
         $data['jabatan'] = $this->take_post->show_item('tb_jabatan')->result();
+        $data['dinas'] = $this->take_post->show_item('tb_dinas')->result();
 
         $this->load->view('admin/jabatan', $data);
     }
