@@ -24,17 +24,17 @@
           <span>Tambah post</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
+        <a class="nav-link" href="<?php echo base_url('admin/dinas'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dinas</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
+        <a class="nav-link" href="<?php echo base_url('admin/jabatan'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Jabatan</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url('admin/add_post'); ?>">
+        <a class="nav-link" href="<?php echo base_url('admin/anggota'); ?>">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Anggota</span></a>
       </li>

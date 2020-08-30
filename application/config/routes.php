@@ -55,5 +55,6 @@ $route['contact'] = 'profile/contact';
 $route['news'] = 'profile/news';
 
 
+
 $route['404_override'] = 'himaerror';
 $route['translate_uri_dashes'] = FALSE;

@@ -46,24 +46,30 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Lokasi</th>
-
+                                            <th>Logo Dinas</th>
+                                            <th>Nama</th>
+                                            <th>Breadcrumb</th>
                                             <th>Pengaturan</th>
                                         </tr>
                                     </thead>
 
                                     <tbody>
-                                        <?php foreach ($jabatan as $jbtn) : ?>
+                                        <?php foreach ($dinas as $dns) : ?>
                                             <tr>
                                                 <td>
-                                                    <?= $jbtn->jabatan ?>
-
+                                                    <img class="align-middle mx-auto" src="<?= base_url('/assets/Logo/') . $dns->logo ?>" alt="IMAGE" style="max-width :150px;">
+                                                </td>
+                                                <td>
+                                                    <?= $dns->nama ?>
+                                                </td>
+                                                <td>
+                                                    <img src="<?= base_url('/assets/Logo/') . $dns->background ?>" alt="IMAGE" style="max-width : 200px;">
                                                 </td>
                                                 <td class="text-center" width="160px">
-                                                    <div class="btn btn-primary btn-sm btnupdate" data-toggle="modal" data-target="#staticBackdrop" data-id=<?= $jbtn->id ?>>
+                                                    <div class="btn btn-primary btn-sm btnupdate" data-toggle="modal" data-target="#staticBackdrop" data-id=<?= $dns->id ?>>
                                                         <i class=" far fa-edit "></i>
                                                     </div>
-                                                    <?= anchor('admin/dinas/delete/' . $jbtn->id, '<div class="btn btn-danger btn-sm">
+                                                    <?= anchor('admin/dinas/delete/' . $dns->id, '<div class="btn btn-danger btn-sm">
                                         <i class="far fa-trash-alt "></i></div>') ?>
                                                 </td>
 
@@ -108,24 +114,38 @@
                 </div>
                 <div class="modal-body">
                     <div class="container">
-                        <form action="<?= base_url() . 'admin/jabatan/'; ?>" method="post">
+                        <?= form_open_multipart('Admin/test/addItems'); ?>
 
-                            <div class="form-row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="Input">Jabatan</label>
-                                    <input name="id" type="hidden" class="form-control" id="id">
-                                    <input name="jabatan" type="text" class="form-control" id="Input">
-                                </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="Input">Logo </label>
+                            <div class="custom-file Photo_1">
+                                <input name="label_1" type="hidden" class="form-control" id="Photo_1">
+                                <input type="file" class="custom-file-input " id="Photo_1" name="Photo_1">
+                                <label class="custom-file-label" for="Photo_1">Choose file</label>
                             </div>
-
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary" id="btntambah">Save</button>
-                                <button type="submit" class="btn btn-primary" id="btnubah">Ubah</button>
+                        </div>
+                        <div class=" col-md-12 mb-3">
+                            <label for="Input">Nama</label>
+                            <input name="id" type="hidden" class="form-control" id="id">
+                            <input name="nama" type="text" class="form-control" id="Input">
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label for="Input">Breadcrumb </label>
+                            <div class="custom-file Photo_1">
+                                <input name="label_2" type="hidden" class="form-control" id="Photo_2">
+                                <input type="file" class="custom-file-input" id="Photo_2" name="Photo_2">
+                                <label class="custom-file-label" for="Photo_2">Choose file</label>
                             </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary" id="btntambah">Save</button>
+                            <button type="submit" class="btn btn-primary" id="btnubah">Ubah</button>
+                        </div>
 
 
-                        </form>
+                        <?= form_close(); ?>
                     </div>
                 </div>
             </div>
@@ -139,15 +159,15 @@
 
             const base = "<?= base_url() ?>";
             // nama input data
-            const name = "Jabatan";
+            const name = "Dinas";
             // nama url
-            const url = "admin/jabatan";
+            const url = "admin/dinas";
 
             $('.btnadd').on('click', function() {
                 $('.modallabel').html('Input Data ' + name);
                 $('#btntambah').show();
                 $('#btnubah').hide();
-                $('[name = "jabatan"]').val('');
+                $('[name = "nama"]').val('');
                 $('[name = "id"]').val('');
 
                 const direct = url + "/addItems";
@@ -158,8 +178,6 @@
                 $('.modallabel').html('Update Data ' + name);
                 $('#btntambah').hide();
                 $('#btnubah').show();
-                $('[name = "jabatan"]').val('');
-                $('[name = "id"]').val('');
 
                 const update = url + "/Update";
                 $('.modal-body form').attr('action', base + update);
@@ -175,8 +193,11 @@
                     method: 'post',
                     dataType: 'json',
                     success: function(data) {
-                        $('[name = "jabatan"]').val(data[0].jabatan);
+                        console.log(data);
+                        $('[name = "nama"]').val(data[0].nama);
                         $('[name = "id"]').val(data[0].id);
+                        $('[name = "label_1"]').val(data[0].logo);
+                        $('[name = "label_2"]').val(data[0].background);
                     }
                 });
             });
