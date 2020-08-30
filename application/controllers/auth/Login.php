@@ -12,6 +12,8 @@ class login extends CI_Controller
         }
 		$this->load->model('take_post');
 	}
+
+
 	public function index()
 	{
 		$this->load->view('auth/login');
@@ -40,7 +42,7 @@ class login extends CI_Controller
 				'status' => "wrong password"
 			);
 			$this->session->set_userdata($data_session);
-			redirect(base_url("Admin/home"));
+			redirect(base_url("auth/login"));
 		}
 	}
 }

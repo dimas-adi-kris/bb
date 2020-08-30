@@ -48,11 +48,11 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href='"#"'><i class="fas fa-envelope fa-2x"></i></a>
-            <a href='"#"' style="padding: 0px 10px;"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href='"#"' style="padding-right: 10px;"><i class="fab fa-line fa-2x"></i></a>
-            <a href='"#"'><i class="fab fa-youtube fa-2x"></i></a>
-            <a href='"#"'><i class="fab fa-facebook fa-2x"></i></a>
+            <a href='"#"'><i class="fas fa-envelope"></i></a>
+            <a href=""><i class="fab fa-instagram "></i></a>
+            <a href=''><i class="fab fa-line"></i></a>
+            <a href='"#"'><i class="fab fa-youtube "></i></a>
+            <a href='"#"'><i class="fab fa-facebook "></i></a>
           </li>
           <li>
             <p style="font-size: 12px;"><span><i class="fas fa-map-marker-alt fa-2x"></i></span> Fakultas Ilmu Komputer Universitas Sriwijaya <br> Jl. Palembang-Prabumulih KM.32 Kab. Indralaya, Kabupaten Ogan Ilir, Sumatera Selatan</p>
